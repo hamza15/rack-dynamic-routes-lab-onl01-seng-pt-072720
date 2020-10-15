@@ -8,7 +8,7 @@ class Application
  
     if req.path=="/items/"
       item_name = req.path.split("/items/").last
-      song = @@songs.find{|s| item.name == item_name}
+      item = @@items.find{|s| item.name == item_name}
  
       resp.write song.artist
     else
